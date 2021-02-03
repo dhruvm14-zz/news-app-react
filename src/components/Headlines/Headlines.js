@@ -6,10 +6,10 @@ import requests from "../../requests";
 function Headlines() {
   return (
     <div className="Headlines">
-      <Articles endPoint={requests.topHeadlines} />
-      <Articles endPoint={requests.technology} />
-      <Articles endPoint={requests.sports} />
-      <Articles endPoint={requests.entertainment} />
+      <Articles endPoint={requests.topHeadlines} title="Top Headlines" />
+      <Articles endPoint={requests.technology} title="Technology" />
+      <Articles endPoint={requests.sports} title="Sport" />
+      <Articles endPoint={requests.entertainment} title="Entertainment" />
     </div>
   );
 }

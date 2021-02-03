@@ -3,7 +3,7 @@ import axios from "axios";
 import Article from "./Article";
 import "./Articles.css";
 var i = 0;
-function Articles({ endPoint }) {
+function Articles({ endPoint, title }) {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     const getData = async () => {
@@ -18,6 +18,7 @@ function Articles({ endPoint }) {
   console.log(articles);
   return (
     <div className="Articles">
+      <h1 className="Articles__title">{title.toUpperCase()}</h1>
       {articles.map((article) => {
         return <Article key={i++} content={article} />;
       })}
